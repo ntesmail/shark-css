@@ -1,0 +1,111 @@
+<div class="explanation">
+    <h2 id="forms-controls">被支持的控件</h2>
+    <h3>输入框</h3>
+    <p>包括大部分表单控件、文本输入域控件，还支持所有 HTML5 类型的输入控件： <code>text</code>、<code>password</code>、<code>datetime</code>、<code>datetime-local</code>、<code>date</code>、<code>month</code>、<code>time</code>、<code>week</code>、<code>number</code>、<code>email</code>、<code>url</code>、<code>search</code>、<code>tel</code> 和 <code>color</code>。</p>
+</div>
+<div class="bs-example">
+<form role="form">
+    <input type="text" class="form-control" placeholder="Text input">
+</form>
+</div>
+
+<div class="explanation">
+    <h3>文本域</h3>
+    <p>支持多行文本的表单控件。可根据需要改变 <code>rows</code> 属性。</p>
+</div>
+<div class="bs-example">
+<form role="form">
+    <textarea class="form-control" rows="3"></textarea>
+</form>
+</div>
+
+<div class="explanation">
+    <h3>多选和单选框</h3>
+    <p>多选框（checkbox）用于选择列表中的一个或多个选项，而单选框（radio）用于从多个选项中只选择一个。</p>
+    <p>设置了 <code>disabled</code> 属性的单选或多选框都能被赋予合适的样式。对于和多选或单选框联合使用的 <code>&lt;label&gt;</code> 标签，如果也希望将悬停于上方的鼠标设置为“禁止点击”的样式，请将 <code>.disabled</code> 类赋予 <code>.radio</code>、<code>.radio-inline</code>、<code>.checkbox</code>、<code>.checkbox-inline</code> 或 <code>&lt;fieldset&gt;</code>。</p>
+    <h4>默认外观（堆叠在一起）</h4>
+</div>
+<div class="bs-example">
+<form role="form">
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value=""> Option one is this and that—be sure to include why it's great
+        </label>
+    </div>
+    <div class="checkbox disabled">
+        <label>
+            <input type="checkbox" value="" disabled=""> Option two is disabled
+        </label>
+    </div>
+    <br>
+    <div class="radio">
+        <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Option one is this and that—be sure to include why it's great
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Option two can be something else and selecting it will deselect option one
+        </label>
+    </div>
+    <div class="radio disabled">
+        <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled=""> Option three is disabled
+        </label>
+    </div>
+</form>
+</div>
+
+<div class="explanation">
+    <h4>内联单选和多选框</h4>
+    <p>通过将 <code>.checkbox-inline</code> 或 <code>.radio-inline</code> 类应用到一系列的多选框（checkbox）或单选框（radio）控件上，可以使这些控件排列在一行。</p>
+</div>
+<div class="bs-example">
+<form role="form">
+    <label class="checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+    </label>
+    <label class="checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+    </label>
+    <label class="checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+    </label>
+</form>
+<br>
+<form role="form">
+    <label class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+    </label>
+    <label class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+    </label>
+    <label class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+    </label>
+</form>
+</div>
+
+<div class="explanation">
+    <h3>下拉列表（select）</h3>
+    <p>使用默认选项或添加 <code>multiple</code> 属性可以同时显示多个选项。</p>
+</div>
+<div class="bs-example">
+<form role="form">
+    <select class="form-control">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+    <br>
+    <select multiple="" class="form-control">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+</form>
+</div>

@@ -1,0 +1,13 @@
+.idea/*
+logs
+node_modules
+.tmp
+.sass-cache
+build
+.DS_Store
+.settings
+.project
+.classpath
+.vscode
+yarn.lock
+npm-debug.log

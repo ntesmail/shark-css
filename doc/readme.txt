@@ -1,0 +1,1 @@
+selection.json   是fontawesome从 https://icomoon.io/app/#/select 拉下来的时候生成的，包含现在项目里用到的所有字体图标的信息，如果需要重新增加字体图标可以先在iconmoon网站上导入这个json，就会展示出现在已经有的字体图标。
