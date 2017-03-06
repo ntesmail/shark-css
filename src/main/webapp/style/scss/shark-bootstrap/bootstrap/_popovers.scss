@@ -183,6 +183,7 @@ button {
 .shark-popover.shark-tooltip{
     border: $tooltip-bg;
     box-shadow: none;
+    background-color: $tooltip-bg;
     .popover-content {
         border-radius: $border-radius-large;
         color: $tooltip-color;

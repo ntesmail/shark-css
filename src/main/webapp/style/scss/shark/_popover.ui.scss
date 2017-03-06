@@ -117,6 +117,7 @@
 
 .shark-popover.shark-tooltip{
     border-radius: $shark-tooltip-radius;
+    background-color: $shark-tooltip-content-bg;
     .popover-content {
         color: $shark-tooltip-content-color;
         background-color: $shark-tooltip-content-bg;
