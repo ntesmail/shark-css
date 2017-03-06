@@ -9,6 +9,7 @@ ul, li {
 /*selecter组件*/
 /*listgroup组件*/
 /*自动补全组件*/
+/*字体*/
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1517,6 +1518,197 @@ button.close {
   margin-top: -1px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+}
+
+i,
+[class*="icon-"],
+.glyphicon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'FontAwesome' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-chevron-left:before {
+  content: "";
+}
+
+.glyphicon-chevron-right:before {
+  content: "";
+}
+
+.glyphicon-ok:before {
+  content: "";
+}
+
+.glyphicon-warning-sign:before {
+  content: "";
+}
+
+.glyphicon-remove:before {
+  content: "";
+}
+
+.icon-equals:before {
+  content: "";
+}
+
+.icon-help_outline:before {
+  content: "";
+}
+
+.icon-search2:before {
+  content: "";
+}
+
+.icon-drag_handle:before {
+  content: "";
+}
+
+.icon-warning-outline:before {
+  content: "";
+}
+
+.icon-star:before {
+  content: "";
+}
+
+.icon-stop:before {
+  content: "";
+}
+
+.icon-chevron-right:before {
+  content: "";
+}
+
+.icon-chevron-down:before {
+  content: "";
+}
+
+.icon-square-o:before {
+  content: "";
+}
+
+.icon-exchange:before {
+  content: "";
+}
+
+.icon-angle-double-right:before {
+  content: "";
+}
+
+.icon-angle-right:before {
+  content: "";
+}
+
+.icon-angle-down:before {
+  content: "";
+}
+
+.icon-exclamation:before {
+  content: "";
+}
+
+.icon-play-circle:before {
+  content: "";
+}
+
+.icon-minus-square-o:before {
+  content: "";
+}
+
+.icon-toggle-down:before {
+  content: "";
+}
+
+.icon-long-arrow-down:before {
+  content: "";
+}
+
+.icon-long-arrow-up:before {
+  content: "";
+}
+
+.icon-check-square-o:before {
+  content: "";
+}
+
+.icon-chevron-left:before {
+  content: "";
+}
+
+.icon-angle-left:before {
+  content: "";
+}
+
+.icon-check:before {
+  content: "";
+}
+
+.icon-close:before {
+  content: "";
+}
+
+.icon-plus:before {
+  content: "";
+}
+
+.icon-minus:before {
+  content: "";
+}
+
+.icon-chevron-up:before {
+  content: "";
+}
+
+.icon-angle-up:before {
+  content: "";
+}
+
+.icon-user:before {
+  content: "";
+}
+
+.icon-trash-o:before {
+  content: "";
+}
+
+.icon-home:before {
+  content: "";
+}
+
+.icon-clock-o:before {
+  content: "";
+}
+
+.icon-lock:before {
+  content: "";
+}
+
+.icon-edit:before {
+  content: "";
+}
+
+.icon-calendar:before {
+  content: "";
+}
+
+.icon-unlock:before {
+  content: "";
+}
+
+.icon-unlock-alt:before {
+  content: "";
 }
 
 code[class*="language-"],
