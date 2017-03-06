@@ -6303,6 +6303,7 @@ button .badge {
 .shark-popover.shark-tooltip {
   border: #000;
   box-shadow: none;
+  background-color: #000;
 }
 
 .shark-popover.shark-tooltip .popover-content {
@@ -7080,9 +7081,11 @@ i,
   overflow-y: auto;
   border-bottom: 1px solid #ddd;
   border-radius: 4px;
+  z-index: 1080;
 }
 
 .list-group .list-group-item {
+  word-break: break-all;
   cursor: pointer;
 }
 
@@ -7093,7 +7096,7 @@ i,
 }
 
 .list-group .list-group-item.active:hover {
-  z-index: 2;
+  z-index: 1081;
   color: #fff;
   background-color: #337ab7;
   border-color: #337ab7;
@@ -7291,7 +7294,7 @@ ul.shark-tree, ul.shark-tree * {
 
 .shark-toastr-container {
   width: 250px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   margin-left: -125px;
@@ -7516,6 +7519,18 @@ html, body, div {
   margin-left: 200px;
 }
 
+.g-foot {
+  width: 100%;
+  min-width: 980px;
+  overflow: hidden;
+}
+
+.g-foot .g-footer {
+  width: 980px;
+  height: 100%;
+  margin: 0 auto;
+}
+
 body.fix-head .g-head {
   position: fixed;
   top: 0;
@@ -7550,8 +7565,22 @@ body {
   width: 60px;
 }
 
-.g-head .nav, .g-head .nav-underline {
+.g-head ul {
   padding: 10px;
+}
+
+.g-foot {
+  padding: 23px 0;
+  background: #32353d;
+  color: #999;
+}
+
+.g-foot .copyright-area {
+  text-align: center;
+}
+
+.g-foot .copyright-area a {
+  color: #999;
 }
 
 .g-side > .bs-docs-sidebar {
@@ -7559,8 +7588,8 @@ body {
 }
 
 @media screen and (max-width: 980px) {
-  .g-bd, .g-head, .g-head .g-header {
-    min-width: 780px;
+  .g-bd, .g-head, .g-foot, .g-foot .g-footer {
+    min-width: 100%;
     width: 100%;
   }
   .g-bd.side-in-right .g-content {
@@ -7569,6 +7598,10 @@ body {
   .g-bd .g-side {
     display: none;
   }
+  h1, .explanation {
+    padding: 0 0 0 8px;
+  }
+  code-overflow: auto;
 }
 
 /*example*/
@@ -7584,7 +7617,6 @@ body {
   position: relative;
   padding: 45px 15px 15px;
   border-style: solid;
-  min-height: 250px;
   overflow: auto;
 }
 
@@ -7652,6 +7684,10 @@ body {
 .bs-docs-sidebar > .nav.nav-fixed, .bs-docs-sidebar > .nav-fixed.nav-underline {
   position: fixed;
   top: 20px;
+}
+
+.fix-head .bs-docs-sidebar > .nav.nav-fixed, .fix-head .bs-docs-sidebar > .nav-fixed.nav-underline {
+  top: 60px;
 }
 
 .bs-docs-sidebar .nav > li > a:hover, .bs-docs-sidebar .nav-underline > li > a:hover,

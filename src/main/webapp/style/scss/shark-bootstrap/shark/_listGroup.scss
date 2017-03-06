@@ -4,7 +4,10 @@
     overflow-y: auto;
     border-bottom: 1px solid $list-group-border;
     border-radius: 4px;
+    z-index: $zindex-list-group;
     .list-group-item {
+        // @include text-ellipsis;
+        word-break: break-all;
         cursor: pointer;
         &:hover {
             text-decoration: none;
@@ -14,7 +17,7 @@
     }
     .list-group-item.active {
         &:hover {
-            z-index: 2; // Place active items above their siblings for proper border styling
+            z-index: $zindex-list-group + 1; // Place active items above their siblings for proper border styling
             color: $list-group-active-color;
             background-color: $list-group-active-bg;
             border-color: $list-group-active-border;

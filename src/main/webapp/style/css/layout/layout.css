@@ -40,6 +40,18 @@ html, body, div {
   margin-left: 130px;
 }
 
+.g-foot {
+  width: 100%;
+  min-width: 980px;
+  overflow: hidden;
+}
+
+.g-foot .g-footer {
+  width: 980px;
+  height: 100%;
+  margin: 0 auto;
+}
+
 body.fix-head .g-head {
   position: fixed;
   top: 0;

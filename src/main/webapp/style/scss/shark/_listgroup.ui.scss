@@ -31,7 +31,8 @@
         top: 0;
         width: 100%;
         cursor: pointer;
-        @include text-ellipsis;
+        // @include text-ellipsis;
+        word-break: break-all;
         margin: 0;
         padding: 10px 15px;
         color: $shark-listgroup-item-color;
