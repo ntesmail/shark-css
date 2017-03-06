@@ -793,9 +793,7 @@ ul.shark-tree, ul.shark-tree * {
   top: 0;
   width: 100%;
   cursor: pointer;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  word-break: break-all;
   margin: 0;
   padding: 10px 15px;
   color: #444444;
@@ -1077,6 +1075,7 @@ ul.shark-tree, ul.shark-tree * {
 
 .shark-popover.shark-tooltip {
   border-radius: 6px;
+  background-color: #444444;
 }
 
 .shark-popover.shark-tooltip .popover-content {

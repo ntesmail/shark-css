@@ -6302,6 +6302,7 @@ button .badge {
 .shark-popover.shark-tooltip {
   border: #000;
   box-shadow: none;
+  background-color: #000;
 }
 
 .shark-popover.shark-tooltip .popover-content {
@@ -7079,9 +7080,11 @@ i,
   overflow-y: auto;
   border-bottom: 1px solid #ddd;
   border-radius: 4px;
+  z-index: 1080;
 }
 
 .list-group .list-group-item {
+  word-break: break-all;
   cursor: pointer;
 }
 
@@ -7092,7 +7095,7 @@ i,
 }
 
 .list-group .list-group-item.active:hover {
-  z-index: 2;
+  z-index: 1081;
   color: #fff;
   background-color: #337ab7;
   border-color: #337ab7;
@@ -7290,7 +7293,7 @@ ul.shark-tree, ul.shark-tree * {
 
 .shark-toastr-container {
   width: 250px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   margin-left: -125px;
