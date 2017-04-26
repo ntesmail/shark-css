@@ -3,25 +3,6 @@
     <p>各个方向</p>
 </div>
 <div class="bs-example bs-example-popover">
-<div class="popover top">
-    <div class="arrow"></div>
-    <div class="popover-title">Popover top</div>
-    <div class="popover-content">Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</div>
+<% include popover-markup.html %>
 </div>
-<div class="popover right">
-    <div class="arrow"></div>
-    <div class="popover-title">Popover right</div>
-    <div class="popover-content">Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</div>
-</div>
-<div class="popover bottom">
-    <div class="arrow"></div>
-    <div class="popover-title">Popover bottom</div>
-    <div class="popover-content">Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</div>
-</div>
-<div class="popover left">
-    <div class="arrow"></div>
-    <div class="popover-title">Popover left</div>
-    <div class="popover-content">Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</div>
-</div>
-<div class="clearfix"></div>
-</div>
+<%- includeMDJs('components/popover-markup.html') %>
