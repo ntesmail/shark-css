@@ -4,6 +4,7 @@ node_modules
 .tmp
 .sass-cache
 build
+dist
 .DS_Store
 .settings
 .project
