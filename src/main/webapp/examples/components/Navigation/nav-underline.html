@@ -3,18 +3,6 @@
     <p>导航</p>
 </div>
 <div class="bs-example">
-    <ul class="nav nav-underline">
-        <li class="active">
-            <a href="javascript:void(0)">学情分析</a>
-        </li>
-        <li>
-            <a href="javascript:void(0)">出卷</a>
-        </li>
-        <li>
-            <a href="javascript:void(0)">阅卷</a>
-        </li>
-        <li>
-            <a href="javascript:void(0)">学生管理</a>
-        </li>
-    </ul>
+<% include nav-underline-markup.html %>
 </div>
+<%- includeMDJs('components/Navigation/nav-underline-markup.html') %>

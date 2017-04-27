@@ -3,11 +3,9 @@
     <p>为输入框设置 <code>disabled</code> 属性可以防止用户输入，并能对外观做一些修改，使其更直观。</p>
 </div>
 <div class="bs-example">
-<form role="form">
-    <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here…" disabled="">
-</form>
+<% include forms-control-disabled-markup-1.html %>
 </div>
-
+<%- includeMDJs('components/Form/forms-control-disabled-markup-1.html') %>
 
 
 <div class="explanation">
@@ -15,24 +13,7 @@
     <p>为<code>&lt;fieldset&gt;</code> 设置 <code>disabled</code> 属性,可以禁用 <code>&lt;fieldset&gt;</code> 中包含的所有控件。</p>
 </div>
 <div class="bs-example">
-<form role="form">
-    <fieldset disabled="">
-        <div class="form-group">
-            <label for="disabledTextInput">Disabled input</label>
-            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
-        </div>
-        <div class="form-group">
-            <label for="disabledSelect">Disabled select menu</label>
-            <select id="disabledSelect" class="form-control">
-                <option>Disabled select</option>
-            </select>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox"> Can't check this
-            </label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </fieldset>
-</form>
+<% include forms-control-disabled-markup-2.html %>
 </div>
+<%- includeMDJs('components/Form/forms-control-disabled-markup-2.html') %>
+

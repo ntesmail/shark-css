@@ -3,25 +3,6 @@
     <p>单独的表单控件会被自动赋予一些全局样式。所有设置了 <code>.form-control</code> 类的 <code>&lt;input&gt;</code>、<code>&lt;textarea&gt;</code> 和 <code>&lt;select&gt;</code> 元素都将被默认设置宽度属性为 <code>width: 100%;</code>。 将 <code>label</code> 元素和前面提到的控件包裹在 <code>.form-group</code> 中可以获得最好的排列。</p>
 </div>
 <div class="bs-example">
-<form role="form">
-    <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputFile">File input</label>
-        <input type="file" id="exampleInputFile">
-        <p class="help-block">Example block-level help text here.</p>
-    </div>
-    <div class="checkbox">
-        <label>
-            <input type="checkbox"> Check me out
-        </label>
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-</form>
+<% include forms-example-markup.html %>
 </div>
+<%- includeMDJs('components/Form/forms-example-markup.html') %>

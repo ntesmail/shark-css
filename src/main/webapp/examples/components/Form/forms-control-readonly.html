@@ -3,7 +3,6 @@
     <p>为输入框设置 <code>readonly</code> 属性可以禁止用户输入，并且输入框的样式也是禁用状态。</p>
 </div>
 <div class="bs-example">
-<form role="form">
-    <input class="form-control" type="text" placeholder="Readonly input here…" readonly="">
-</form>
+<% include forms-control-readonly-markup.html %>
 </div>
+<%- includeMDJs('components/Form/forms-control-readonly-markup.html') %>

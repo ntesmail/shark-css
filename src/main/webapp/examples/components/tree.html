@@ -3,34 +3,6 @@
     <p>多级树形结构</p>
 </div>
 <div class="bs-example">
-    <ul class="shark-tree tree-open">
-        <li>
-            <label style="padding-left: 0px;">
-                <a class="tree-icon tree-icon-down"></a>
-                <a class="tree-icon tree-icon-check-minus"></a>
-                <span class="tree-node-name">邮件事业部</span>
-            </label>
-            <ul class="tree-open">
-                <li>
-                    <label style="padding-left: 16px;">
-                        <a class="tree-icon tree-icon-right"></a>
-                        <a class="tree-icon tree-icon-check"></a>
-                        <span class="tree-node-name">产品支持中心</span>
-                    </label>
-                </li>
-                <li>
-                    <label style="padding-left: 32px;">
-                        <a class="tree-icon tree-icon-check-empty"></a>
-                        <span class="tree-node-name">有钱产品部</span>
-                    </label>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <label style="padding-left: 0px;">
-                <a class="tree-icon tree-icon-right"></a>
-                <span class="tree-node-name tree-node-selected">有钱产品部</span>
-            </label>
-        </li>
-    </ul>
+<% include tree-markup.html %>
 </div>
+<%- includeMDJs('components/tree-markup.html') %>

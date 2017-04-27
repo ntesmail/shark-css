@@ -71,6 +71,8 @@ gulp.task('build-css', function(cb) {
 
 gulp.task('serve-express', function(cb) {
     var app = express();
+    var showdown  = require('showdown'),
+    converter = new showdown.Converter();
 
     app.engine('.html', require('ejs').__express);
     // 后缀
@@ -84,11 +86,11 @@ gulp.task('serve-express', function(cb) {
     // index.html
     app.get(config.contextPath + '/index.html', function(req, res) {
         //向页面模板传递参数，可以传递字符串和对象，注意格式
-        res.render('index', {headContent: headContent, footContent: footContent});
+        res.render('index', {converter: converter, headContent: headContent, footContent: footContent});
     });
     app.get(config.contextPath + '/shark.html', function(req, res) {
         //向页面模板传递参数，可以传递字符串和对象，注意格式
-        res.render('shark', {headContent: headContent, footContent: footContent});
+        res.render('shark', {converter: converter, headContent: headContent, footContent: footContent});
     });
     var router = automation.registerServerRouter({
         baseConf: config,

@@ -6,6 +6,9 @@ var request = require('sync-request');
 var config = require('./shark-deploy-conf.js');
 
 var app = express();
+var showdown  = require('showdown'),
+converter = new showdown.Converter();
+
 var webappDir = 'dist/';
 
 app.engine('.html', require('ejs').__express);
@@ -19,12 +22,12 @@ var footContent = request('GET', 'http://shark.mail.netease.com/shark/static/foo
 // index.html
 app.get(config.contextPath + '/index.html', function (req, res) {
     //向页面模板传递参数，可以传递字符串和对象，注意格式
-    res.render('index', {headContent: headContent, footContent: footContent});
+    res.render('index', {converter: converter, headContent: headContent, footContent: footContent});
 });
 // shark.html
 app.get(config.contextPath + '/shark.html', function (req, res) {
     //向页面模板传递参数，可以传递字符串和对象，注意格式
-    res.render('shark', {headContent: headContent, footContent: footContent});
+    res.render('shark', {converter: converter, headContent: headContent, footContent: footContent});
 });
 
 

@@ -1,6 +1,5 @@
-i , 
-[class*="icon-"],
-.glyphicon {
+i ,
+[class*="icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'FontAwesome' !important;
   speak: none;
@@ -17,32 +16,6 @@ i ,
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.glyphicon-chevron-left {
-    &:before {
-      content: $icon-chevron-left;
-    }
-}
-.glyphicon-chevron-right {
-    &:before {
-      content: $icon-chevron-right;
-    }
-}
-.glyphicon-ok {
-    &:before {
-      content: $icon-check;
-    }
-}
-.glyphicon-warning-sign {
-    &:before {
-      content: $icon-warning-outline;
-    }
-}
-.glyphicon-remove {
-    &:before {
-      content: $icon-close;
-    }
-}
-
 
 .icon-equals {
   &:before {
