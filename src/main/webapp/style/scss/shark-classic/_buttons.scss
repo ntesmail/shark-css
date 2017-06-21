@@ -25,7 +25,7 @@
     &:focus,
     &.focus,
     &:hover {
-        border-color: #4a4a4a;
+        border-color: $gray-dark;
     }
     &:active,
     &.active,
@@ -43,7 +43,7 @@
         &:focus,
         &.focus {
             color: $gray-lighter;
-            background-color: #fff;
+            background-color: $white-base;
             border-color: $gray-lighter;
         }
     }
