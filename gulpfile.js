@@ -12,7 +12,7 @@ var config = require('./shark-deploy-conf.js');
 
 /***------------- build start ---------------***/
 
-gulp.task('build', function(cb) {
+gulp.task('build', function (cb) {
     automation.registerBuildTasks({
         baseConf: config,
         gulp: gulp
@@ -25,7 +25,7 @@ gulp.task('build', function(cb) {
         throw new Error('--target should be online or test or develop');
     }
 
-    gulp.on('error', function() {
+    gulp.on('error', function () {
         console.log('error error error error');
     });
 
@@ -54,7 +54,7 @@ gulp.task('build', function(cb) {
 
 });
 
-gulp.task('build-css', function(cb) {
+gulp.task('build-css', function (cb) {
     var stylePath = path.join(config.rootPath, config.webapp, config.scssPath);
     var compassPath = path.join(path.join(__dirname, './node_modules/compass-mixins/lib'));
     var sassOpt = {
@@ -63,16 +63,16 @@ gulp.task('build-css', function(cb) {
     };
     var cssPath = path.join(config.rootPath, config.webapp, config.cssPath);
     gulp.src(path.join(stylePath, '**/*.scss'))
-            .pipe(sass(sassOpt).on('error', sass.logError))
-            .pipe(gulp.dest(cssPath));
+        .pipe(sass(sassOpt).on('error', sass.logError))
+        .pipe(gulp.dest(cssPath));
 })
 
 
 
-gulp.task('serve-express', function(cb) {
+gulp.task('serve-express', function (cb) {
     var app = express();
-    var showdown  = require('showdown'),
-    converter = new showdown.Converter();
+    var showdown = require('showdown'),
+        converter = new showdown.Converter();
 
     app.engine('.html', require('ejs').__express);
     // 后缀
@@ -84,20 +84,37 @@ gulp.task('serve-express', function(cb) {
     var footContent = request('GET', 'http://shark.mail.netease.com/shark/static/foot.html?v=shark-css').getBody();
 
     // index.html
-    app.get(config.contextPath + '/index.html', function(req, res) {
+    app.get(config.contextPath + '/index.html', function (req, res) {
         //向页面模板传递参数，可以传递字符串和对象，注意格式
-        res.render('index', {converter: converter, headContent: headContent, footContent: footContent});
+        res.render('index', {
+            converter: converter,
+            headContent: headContent,
+            footContent: footContent
+        });
     });
-    app.get(config.contextPath + '/shark.html', function(req, res) {
+    // test.html
+    app.get(config.contextPath + '/test.html', function (req, res) {
         //向页面模板传递参数，可以传递字符串和对象，注意格式
-        res.render('shark', {converter: converter, headContent: headContent, footContent: footContent});
+        res.render('test', {
+            converter: converter,
+            headContent: headContent,
+            footContent: footContent
+        });
+    });
+    app.get(config.contextPath + '/shark.html', function (req, res) {
+        //向页面模板传递参数，可以传递字符串和对象，注意格式
+        res.render('shark', {
+            converter: converter,
+            headContent: headContent,
+            footContent: footContent
+        });
     });
     var router = automation.registerServerRouter({
         baseConf: config,
         gulp: gulp
     });
     app.use(router);
-    app.listen(config.port, function(err) {
+    app.listen(config.port, function (err) {
         if (err) {
             return console.log(err);
         }
@@ -108,7 +125,7 @@ gulp.task('serve-express', function(cb) {
 });
 
 
-gulp.task('serve', function(cb) {
+gulp.task('serve', function (cb) {
     automation.registerServerTasks({
         baseConf: config,
         gulp: gulp

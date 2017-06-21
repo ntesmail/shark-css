@@ -1,0 +1,42 @@
+@mixin button-style($color, $background, $border, $background-click) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+    &:focus,
+    &.focus,
+    &:hover {
+        color: $color;
+        background-color: $background;
+        border-color: $border;
+    }
+    &:active,
+    &.active,
+    .open>&.dropdown-toggle {
+        color: $color;
+        background-color: $background-click;
+        border-color: $border;
+        background-image: none;
+        &:hover,
+        &:focus,
+        &.focus {
+            color: $color;
+            background-color: $background-click;
+            border-color: $background-click;
+        }
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &:hover,
+        &:focus,
+        &.focus {
+            color: #fff;
+            background-color: $gray-lighter;
+            border-color: $gray-lighter;
+        }
+    }
+    .badge {
+        color: $background;
+        background-color: $color;
+    }
+}
