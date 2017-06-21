@@ -1,0 +1,17 @@
+// Focus for file, radio, and checkbox
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    outline: 0px;
+}
+
+// Common form controls
+.form-control {
+    @include box-shadow(none);
+    @include transition(border-color ease-in-out 0s, box-shadow ease-in-out 0s);
+    &:focus {
+        border-color: $input-border;
+        outline: 0;
+        @include box-shadow(none);
+    }
+}

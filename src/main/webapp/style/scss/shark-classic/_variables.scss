@@ -10,7 +10,9 @@ $gray-base: #000 !default;
 $gray-darker: lighten($gray-base, 11.5%) !default; // #1d1d1d
 $gray-dark: lighten($gray-base, 29%) !default; // #4a4a4a
 $gray: lighten($gray-base, 50%) !default; // #808080
+$gray-little-light:lighten($gray-base, 60.9%) !default; // #9b9b9b
 $gray-light: lighten($gray-base, 79.3%) !default; // #cacaca
+$gray-hover: lighten($gray-base, 90%) !default; // #e6e6e6
 $gray-lighter: lighten($gray-base, 90.5%) !default; // #e7e7e7
 //
 $brand-primary: #4CA6E6 !default;
@@ -43,7 +45,7 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 $font-size-base: 14px !default;
-$font-size-large: ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-large: ceil(($font-size-base * 1.15)) !default; // ~16px
 $font-size-small: ceil(($font-size-base * 0.85)) !default; // ~12px
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base: 1.428571429 !default; // 20/14
@@ -52,15 +54,15 @@ $line-height-computed: floor(($font-size-base * $line-height-base)) !default; //
 //== Components $nochange$
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
-$padding-base-vertical: 7px !default;
+$padding-base-vertical: 4px !default;
 $padding-base-horizontal: 10px !default;
-$padding-large-vertical: 10px !default;
+$padding-large-vertical: 7px !default;
 $padding-large-horizontal: 16px !default;
-$padding-small-vertical: 5px !default;
+$padding-small-vertical: 3px !default;
 $padding-small-horizontal: 10px !default;
 $padding-xs-vertical: 1px !default;
 $padding-xs-horizontal: 5px !default;
-$line-height-large: 1.3333333 !default; // extra decimals for Win 8.1 Chrome
+$line-height-large: 1.375 !default; // extra decimals for Win 8.1 Chrome
 $line-height-small: 1.5 !default;
 $border-radius-base: 4px !default;
 $border-radius-large: 6px !default;
@@ -76,10 +78,23 @@ $caret-width-large: 5px !default;
 //== Tables
 //
 //## Customizes the `.table` component with basic values, each used across all table variations.
+//** Padding for `<th>`s and `<td>`s.
+$table-cell-padding: 10px !default;
+//** Padding for cells in `.table-condensed`.
+$table-condensed-cell-padding: 5px !default;
+//** Default background color used for all tables.
+$table-bg: transparent !default;
+//** Background color used for `.table-striped`.
+$table-bg-accent: #f9f9f9 !default;
+//** Background color used for `.table-hover`.
+$table-bg-hover: #f5f5f5 !default;
+$table-bg-active: $table-bg-hover !default;
 //** Default table header background color used for all tables. $newAdd$
-$table-hd-bg: $gray-lighter !default;
+$table-hd-bg: #f7f8fa !default;
+$table-hd-color:#333333 !default;
+$table-body-color:#666666 !default;
 //** Border color for table and cell borders.
-$table-border-color: $gray-light !default;
+$table-border-color: #d2d2d2 !default;
 //== Buttons
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
@@ -120,6 +135,8 @@ $btn-link-disabled-color: $gray-lighter !default;
 //##
 //** Text color for `<input>`s
 $input-color: $gray-dark !default;
+//** `<input disabled>` background color
+$input-bg-disabled: $gray-lighter !default;
 //** `<input>` border color
 $input-border: #979797 !default;
 //** Border color for inputs on focus
@@ -127,7 +144,13 @@ $input-border-focus: #979797 !default;
 //** Placeholder text color
 $input-color-placeholder: $gray-light !default;
 //** `.form-group` margin
-$form-group-margin-bottom: 30px !default;
+$form-group-margin-bottom: 10px !default;
+//** Default `.form-control` height
+$input-height-base: ($line-height-computed + ($padding-base-vertical * 2) + 2) !default; //~30px
+//** Large `.form-control` height
+$input-height-large: (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default; //~38px
+//** Small `.form-control` height
+$input-height-small: (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default; //~26px
 //== Media queries breakpoints
 //
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
@@ -191,37 +214,36 @@ $container-lg: $container-large-desktop !default;
 //
 //##
 //=== Shared nav styles
+$nav-bg: #F7F8FA !default;
+$nav-item-size-base:140px !default;
 $nav-link-padding: 10px 15px !default;
-$nav-link-hover-bg: $gray-lighter !default;
+$nav-link-hover-bg: $gray-hover !default;
+$nav-link-click-bg: $brand-primary !default;
 $nav-disabled-link-color: $gray-light !default;
 $nav-disabled-link-hover-color: $gray-light !default;
 //== Tabs
-$nav-tabs-border-color: #ddd !default;
+$nav-tabs-border-color: #44A8E8 !default;
 $nav-tabs-link-hover-border-color: $gray-lighter !default;
-$nav-tabs-active-link-hover-bg: $body-bg !default;
-$nav-tabs-active-link-hover-color: $gray !default;
+$nav-tabs-active-link-hover-bg: $nav-tabs-border-color !default;
+$nav-tabs-active-link-hover-color: $white-base !default;
 $nav-tabs-active-link-hover-border-color: #ddd !default;
 $nav-tabs-justified-link-border-color: #ddd !default;
 $nav-tabs-justified-active-link-border-color: $body-bg !default;
-//== Pills
-$nav-pills-border-radius: $border-radius-base !default;
-$nav-pills-active-link-hover-bg: $component-active-bg !default;
-$nav-pills-active-link-hover-color: $component-active-color !default;
 //== Pagination
 //
 //##
-$pagination-color: $link-color !default;
+$pagination-color: $gray !default;
 $pagination-bg: #fff !default;
-$pagination-border: #ddd !default;
-$pagination-hover-color: $link-hover-color !default;
-$pagination-hover-bg: $gray-lighter !default;
-$pagination-hover-border: #ddd !default;
+$pagination-border: #fff !default;
+$pagination-hover-color: $gray !default;
+$pagination-hover-bg: $gray-hover !default;
+$pagination-hover-border: $gray-hover !default;
 $pagination-active-color: #fff !default;
-$pagination-active-bg: $brand-primary !default;
-$pagination-active-border: $brand-primary !default;
+$pagination-active-bg: $gray-little-light !default;
+$pagination-active-border: $gray-little-light !default;
 $pagination-disabled-color: $gray-light !default;
 $pagination-disabled-bg: #fff !default;
-$pagination-disabled-border: #ddd !default;
+$pagination-disabled-border: #fff !default;
 //== Pager
 //
 //##
@@ -273,13 +295,15 @@ $modal-title-line-height: $line-height-base !default;
 //** Background color of modal content area
 $modal-content-bg: #fff !default;
 //** Modal content border color
-$modal-content-border-color: #dceaf3 !default;
+$modal-content-border-color: #DCEAF4 !default;
 //** Modal content border color **for IE8**
 $modal-content-fallback-border-color: #dceaf3 !default;
 //** Modal backdrop background color
 $modal-backdrop-bg: #000 !default;
 //** Modal backdrop opacity
 $modal-backdrop-opacity: .5 !default;
+//** Modal header  color
+$modal-header-color:$modal-content-border-color!default;
 //** Modal header border color
 $modal-header-border-color: #fff !default;
 //** Modal footer border color
@@ -295,7 +319,7 @@ $list-group-bg: #fff !default;
 //** `.list-group-item` border color
 $list-group-border: #fff !default;
 //** `.list-group-item` text color $newAdd$
-$list-group-text-color: #4a4a4a !default;
+$list-group-text-color: $gray-dark !default;
 //** List group border radius
 $list-group-border-radius: $border-radius-base !default;
 //** Background color of single list items on hover
