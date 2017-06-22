@@ -149,7 +149,62 @@
                                                                                                                                                                     <% include components/modal.html %>
                 </div>
             </div>
-            <div class="colorName">测试一下</div>
+            <div class="colorName">
+                <div class="nav-bar" nav="">
+                    <a class="nav-title js-group-title showList" href="javascript:void(0);">
+                        <i class="sprite-down"></i><span>首页</span>
+                    </a>
+                    <div class="nav-wrap js-group-wrap" style="display: block;">
+                        <a nav-module="welcome" ng-click="go('welcome')" class="nav-item active" href="javascript:void(0);">首页</a>
+                        <a nav-module="" class="nav-item" href="javascript:void(0);">帮助文档</a>
+                    </div>
+                    <a class="nav-title js-group-title" href="javascript:void(0);">
+                        <i class="sprite-down"></i><span>供应商管理</span>
+                    </a>
+                    <div class="nav-wrap js-group-wrap" style="display: none;">
+                        <a nav-module="account-security" ng-click="go('account-security')" class="nav-item" href="javascript:void(0);">账号安全</a>
+                    </div>
+                    <a class="nav-title js-group-title" href="javascript:void(0);">
+                        <i class="sprite-down"></i><span>采购单汇总</span>
+                    </a>
+                    <div class="nav-wrap js-group-wrap">
+                        <a nav-module="purchase-order-list" ng-click="go('purchase-order-list',{state:0})" class="nav-item" href="javascript:void(0);">未完结汇总</a>
+                        <a nav-module="purchase-order-completelist" ng-click="go('purchase-order-completelist',{state:4})" class="nav-item" href="javascript:void(0);">已完结汇总</a>
+                    </div>
+                    <a class="nav-title js-group-title" href="javascript:void(0);">
+                        <i class="sprite-down"></i><span>采购单排期管理</span>
+                    </a>
+                    <div class="nav-wrap js-group-wrap">
+                        <a nav-module="produce-schedule-precommit" ng-click="go('produce-schedule-precommit',{state:1})" class="nav-item" href="javascript:void(0);">待提交排期</a>
+                        <a nav-module="produce-schedule-preconfirm" ng-click="go('produce-schedule-preconfirm',{state:2})" class="nav-item" href="javascript:void(0);">待严选确认排期</a>
+                        <a nav-module="produce-schedule-presuccess" ng-click="go('produce-schedule-presuccess',{state:3})" class="nav-item" href="javascript:void(0);">生效中排期</a>
+                    </div>
+                    <a class="nav-title js-group-title" href="javascript:void(0);">
+                        <i class="sprite-down"></i><span>采购单质检管理</span>
+                    </a>
+                    <div class="nav-wrap js-group-wrap">
+                        <a nav-module="qc-purchase-order-list" ng-click="go('qc-purchase-order-list')" class="nav-item" href="javascript:void(0);">等待预约质检采购单</a>
+                        <a nav-module="order-schedule-list" ng-click="go('order-schedule-list',{state:0})" class="nav-item" href="javascript:void(0);">已预约待排期列表</a>
+                        <a nav-module="schedule-qc-list" ng-click="go('schedule-qc-list',{state:1})" class="nav-item" href="javascript:void(0);">已排期待质检列表</a>
+                    </div>
+                    <a class="nav-title js-group-title" href="javascript:void(0);">
+                        <i class="sprite-down"></i><span>采购单入库管理</span>
+                    </a>
+                    <div class="nav-wrap js-group-wrap">
+                        <a nav-module="instock-purchase-order-list" ng-click="go('instock-purchase-order-list')" class="nav-item" href="javascript:void(0);">等待预约入库单据</a>
+                        <a nav-module="instock-ordered-list" ng-click="go('instock-ordered-list')" class="nav-item" href="javascript:void(0);">已预约待入库列表</a>
+                        <a nav-module="instock-scheduled-list" ng-click="go('instock-scheduled-list')" class="nav-item" href="javascript:void(0);">已排期待入库列表</a>
+                        <a nav-module="instock-dispatched-list" ng-click="go('instock-dispatched-list')" class="nav-item" href="javascript:void(0);">已发货待入库列表</a>
+                    </div>
+                    <a class="nav-title js-group-title" href="javascript:void(0);">
+                        <i class="sprite-down"></i><span>订单发货管理</span>
+                    </a>
+                    <div class="nav-wrap js-group-wrap" style="display: none;">
+                        <a nav-module="external-order-export" ng-click="go('external-order-export')" class="nav-item" href="javascript:void(0);">订单导出发货</a>
+                        <a nav-module="external-order-update" ng-click="go('external-order-update')" class="nav-item" href="javascript:void(0);">上传发货物流</a>
+                    </div>
+                </div>
+            </div>
             <% include layout/foot.html%>
     </body>
 

@@ -1,0 +1,23 @@
+// 一级标题
+.title-level1 {
+    font-size: $font-size-large;
+    color: $gray-darker;
+}
+
+// 二级标题
+.title-level2 {
+    font-size: $font-size-base;
+    color: $gray-darker;
+}
+
+// 正文
+.main-text {
+    font-size: $font-size-small;
+    color: $gray-darker;
+}
+
+// 次要文本
+.sub-main-text {
+    font-size: $font-size-small;
+    color: $gray;
+}

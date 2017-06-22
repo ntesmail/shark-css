@@ -210,6 +210,19 @@ $container-md: $container-desktop !default;
 $container-large-desktop: (1140px + $grid-gutter-width) !default;
 //** For `$screen-lg-min` and up.
 $container-lg: $container-large-desktop !default;
+//== Navbar
+//
+//##
+// Basics of a navbar
+$navbar-height: 40px !default;
+$navbar-title-bg-color:#DCEAF4 !default;
+$navbar-title-padding-left:11px !default;
+$navbar-title-border-color:#CBDEEA !default;
+$navbar-item-border-color:#EFEFEF;
+$navbar-item-bg-color: #F7F8FA !default;
+$navbar-item-hover-color:#F4F4F4 !default;
+$navbar-item-click-color:#5BA6EA !default;
+$navbar-item-padding-left:35px !default;
 //== Navs
 //
 //##

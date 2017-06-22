@@ -1,0 +1,54 @@
+/* 左侧导航 */
+
+.nav-bar {
+    position: relative;
+    height: 100%;
+    a {
+        display: block;
+        height: $navbar-height;
+        line-height: $navbar-height;
+    }
+    a:hover,
+    a:focus {
+        text-decoration: none;
+        outline: 0px;
+    }
+    a.nav-title {
+        padding-left: $navbar-title-padding-left;
+        color: $gray-darker;
+        background-color: $navbar-title-bg-color;
+        border-bottom: solid 1px $navbar-title-border-color;
+        i {
+            line-height: $navbar-height;
+            margin-right: 11px;
+            margin-top: -4px;
+        }
+    }
+    a.nav-title.showList {
+        border-bottom: 0px;
+        i {
+            transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+        }
+    }
+    a.nav-title:last-child,
+    a.nav-item:last-child {
+        border-bottom: 0px;
+    }
+    a.nav-item {
+        background-color: $navbar-item-bg-color;
+        padding-left: $navbar-item-padding-left;
+        color: $gray-dark;
+        border-bottom: solid 1px $navbar-item-border-color;
+    }
+    a.nav-item:hover {
+        background-color: $navbar-item-hover-color;
+    }
+    a.nav-item.active {
+        color: $white-base;
+        background-color: $navbar-item-click-color;
+    }
+} //导航菜单组
+.nav-wrap {
+    display: none;
+}
