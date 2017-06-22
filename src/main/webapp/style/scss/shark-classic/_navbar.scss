@@ -23,12 +23,16 @@
             margin-right: 11px;
             margin-top: -4px;
         }
+        i:before {
+            font-family: 'icomoon';
+            content: $icon-down;
+        }
     }
     a.nav-title.showList {
         border-bottom: 0px;
-        i {
-            transform: rotate(180deg);
-            -ms-transform: rotate(180deg);
+        i:before {
+            font-family: 'icomoon';
+            content: $icon-up;
         }
     }
     a.nav-title:last-child,

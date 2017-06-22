@@ -16,11 +16,65 @@
                 margin-left: 0;
                 border-left-radius: 0px;
             }
+            >a:before {
+                font-family: 'icomoon';
+                content: $icon-first;
+                color: $icon-first-color;
+            }
+        }
+        &:nth-child(2) {
+            >a:before {
+                font-family: 'icomoon';
+                content: $icon-prev;
+                color: $icon-prev-color;
+            }
+        }
+        &:nth-last-child(2) {
+            >a:before {
+                font-family: 'icomoon';
+                content: $icon-next;
+                color: $icon-next-color;
+            }
         }
         &:last-child {
             >a,
             >span {
                 border-right-radius: 0px;
+            }
+            >a:before {
+                font-family: 'icomoon';
+                content: $icon-last;
+                color: $icon-last-color;
+            }
+        }
+    }
+    >.disabled {
+        &:first-child {
+            >a:before {
+                font-family: 'icomoon';
+                content: $icon-first-disabled;
+                color: $icon-first-disabled-color;
+            }
+        }
+        &:nth-child(2) {
+            >a:before {
+                font-family: 'icomoon';
+                content: $icon-prev-disabled;
+                color: $icon-prev-disabled-color;
+            }
+        }
+        &:nth-last-child(2) {
+            >a:before {
+                font-family: 'icomoon';
+                content: $icon-next-disabled;
+                color: $icon-next-disabled-color;
+            }
+        }
+        &:last-child {
+            >a:before {
+                font-family: 'icomoon';
+                content: $icon-last-disabled;
+                color: $icon-last-disabled-color;
             }
         }
     }

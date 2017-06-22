@@ -1,0 +1,87 @@
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-down:before {
+    content: "\e901";
+}
+
+.icon-up:before {
+    content: "\e902";
+}
+
+.icon-checkbox-selectd:before {
+    content: "\e903";
+    color: #4ca6e6;
+}
+
+.icon-radio-selected:before {
+    content: "\e913";
+    color: #4990e2;
+}
+
+.icon-close:before {
+    content: "\e900";
+    color: #cacaca;
+}
+
+.icon-checkbox-selected:before {
+    content: "\e908";
+    color: #4ca6e6;
+}
+
+.icon-down-list:before {
+    content: "\e90a";
+    color: #979797;
+}
+
+.icon-first:before {
+    content: "\e912";
+    color: #9b9b9b;
+}
+
+.icon-first-disabled:before {
+    content: "\e911";
+    color: #e7e7e7;
+}
+
+.icon-prev:before {
+    content: "\e910";
+    color: #9b9b9b;
+}
+
+.icon-prev-disabled:before {
+    content: "\e90f";
+    color: #e7e7e7;
+}
+
+.icon-last-disabled:before {
+    content: "\e90e";
+    color: #e7e7e7;
+}
+
+.icon-next:before {
+    content: "\e90d";
+    color: #9b9b9b;
+}
+
+.icon-next-disabled:before {
+    content: "\e90c";
+    color: #e7e7e7;
+}
+
+.icon-last:before {
+    content: "\e90b";
+    color: #979797;
+}

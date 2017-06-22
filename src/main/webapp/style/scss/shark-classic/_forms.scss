@@ -15,3 +15,60 @@ input[type="checkbox"]:focus {
         @include box-shadow(none);
     }
 }
+
+//调整checkBox和radio样式
+$bgc:#4990E2;
+.input-label {
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    position: absolute;
+    left: -999em;
+}
+
+input[type="checkbox"]+span:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    border: 1px solid $gray;
+    margin: 0 10px 0 0;
+    border-radius: 0px;
+    font: bold 18px/7px Verdana, sans-serif;
+    color: $bgc;
+}
+
+input[type="checkbox"]:checked+span:before {
+    font-family: 'icomoon';
+    content: $icon-list-selected;
+    color: $icon-list-selected-color;
+}
+
+input[type="radio"]+span:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin: 0 10px 0 0;
+    border: 1px solid $gray;
+    border-radius: 100%;
+}
+
+input[type="radio"]:checked+span:before {
+    font-family: 'icomoon';
+    content: $icon-radio-selected;
+    color: $icon-radio-selected-color;
+}
+
+input[type="checkbox"]::disabled+span:before,
+input[type="checkbox"].disabled+span:before,
+input[type="radio"]::disabled+span:before,
+input[type="radio"].disabled+span:before {
+    border-color: $gray-light;
+    cursor: $cursor-disabled;
+}

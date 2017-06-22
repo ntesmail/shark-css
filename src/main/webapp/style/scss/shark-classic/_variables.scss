@@ -379,3 +379,80 @@ $dl-horizontal-offset: $component-offset-horizontal !default;
 $dl-horizontal-breakpoint: $grid-float-breakpoint !default;
 //** Horizontal line color.
 $hr-border: $gray-lighter !default;
+
+/*shark组件变量*/
+
+$shark-base-color: $gray-dark;
+$shark-base-bg: $white-base;
+$shark-hover-color: #555;
+$shark-active-bg: darken(#428bca, 6.5%) !default; // #337ab7;
+$shark-hover-bg: #f5f5f5;
+$shark-disable-color: $gray-little-light;
+$shark-disable-bg: $gray-lighter; // #eee !default;
+$shark-active-color: $white-base;
+$shark-active-bg: #f50808 !default;
+$shark-base-indent: 10px !default;
+$component-active-bg: $brand-primary !default;
+
+/*selecter组件*/
+
+$shark-selecter-padding: 0 $shark-base-indent !default;
+$shark-selecter-font-size: $font-size-small;
+$shark-selecter-radius: $border-radius-small !default;
+$shark-selecter-minwidth: 100px !default;
+// $shark-selecter-labelheight: $shark-selecter-font-size * 2.5;
+// $shark-selecter-color: $shark-base-color;
+// $shark-selecter-bg: $shark-base-bg;
+$shark-selecter-disable-color: $shark-disable-color;
+$shark-selecter-disable-bg: $shark-disable-bg;
+// $shark-selecter-caret-width: 4px !default;
+$shark-selecter-caret-border-color: #979797 !default;
+$shark-selecter-caret-border-top:11px !default;
+$shark-selecter-caret-border-right:7.5px !default;
+$shark-selecter-caret-border-left:7.5px !default;
+$shark-selecter-caret-top: 40% !default;
+$shark-selecter-caret-right: 10px !default;
+
+/*listgroup组件*/
+
+$shark-listgroup-maxheight: 300px !default;
+$shark-listgroup-radius: $border-radius-small !default;
+$shark-listgroup-border: $shark-selecter-caret-border-color;
+$shark-listgroup-item-border-width: 0 1px 1px !default;
+$shark-listgroup-item-padding: 0 18px !default;
+$shark-listgroup-item-color: $shark-base-color; //列表中每个item的字体颜色
+$shark-listgroup-item-bg: $shark-base-bg; //列表中每个item的背景色
+$shark-listgroup-item-hover-color: $shark-hover-color; //列表中每个itemhover时的颜色
+$shark-listgroup-item-hover-bg: $shark-hover-bg; //列表中每个itemhover时的背景色
+
+/*字体图标*/
+
+$icon-list-selected: "\e903";
+$icon-list-selected-color: #4ca6e6;
+$icon-list-selected-size:-12px !default;
+$icon-down:"\e901";
+$icon-radio-selected:"\e913";
+$icon-radio-selected-color: #4990e2;
+$icon-close:"\e900";
+$icon-close-color: #cacaca;
+$icon-checkbox-selected:"\e908";
+$icon-checkbox-selected-color: #4ca6e6;
+$icon-up:"\e902";
+$icon-down-list:"\e90a";
+$icon-down-list-color: #979797;
+$icon-first:"\e912";
+$icon-first-color: #9b9b9b;
+$icon-first-disabled:"\e911";
+$icon-first-disabled-color: #e7e7e7;
+$icon-prev:"\e910";
+$icon-prev-color: #9b9b9b;
+$icon-prev-disabled:"\e90f";
+$icon-prev-disabled-color: #e7e7e7;
+$icon-last-disabled:"\e90e";
+$icon-last-disabled-color: #e7e7e7;
+$icon-next:"\e90d";
+$icon-next-color: #9b9b9b;
+$icon-next-disabled:"\e90c";
+$icon-next-disabled-color: #e7e7e7;
+$icon-last:"\e90b";
+$icon-last-color: #979797;

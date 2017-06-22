@@ -1,0 +1,101 @@
+.position-absolute {
+    position: absolute;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.shark-selecter,
+.open {
+    box-sizing: border-box;
+    font-size: $shark-selecter-font-size;
+    .selecter {
+        height: $input-height-base;
+        padding: $shark-selecter-padding;
+        line-height: $input-height-base;
+        color: $gray-dark;
+        position: relative;
+        cursor: pointer;
+        display: block;
+        text-align: left;
+        min-width: $shark-selecter-minwidth;
+        border-radius: $shark-selecter-radius;
+        border: 1px solid $shark-listgroup-border;
+        .caret {
+            position: absolute;
+            top: $shark-selecter-caret-top;
+            right: $shark-selecter-caret-right;
+        }
+    }
+}
+
+.shark-selecter {
+    .selecter:hover,
+    .selecter:focus,
+    .selecter:active {
+        text-decoration: none;
+    }
+    &.disabled {
+        .selecter {
+            border: 1px solid $shark-selecter-disable-color;
+            color: $shark-selecter-disable-color;
+            background-color: $shark-selecter-disable-bg;
+            cursor: $cursor-disabled;
+        }
+    }
+}
+
+.shark-selecter,
+.shark-selecter.open {
+    .caret {
+        border-right: $shark-selecter-caret-border-right solid transparent;
+        border-left: $shark-selecter-caret-border-left solid transparent;
+        border-bottom: 0 solid transparent;
+        border-top: $shark-selecter-caret-border-top solid $shark-selecter-caret-border-color;
+    }
+}
+
+.shark-selecter.open {
+    .selecter {
+        border-radius: $shark-selecter-radius $shark-selecter-radius 0 0;
+    }
+}
+
+.list-group-item {
+    height: $input-height-base;
+    line-height: $input-height-base;
+    color: $gray-dark;
+    font-size: $font-size-small;
+    padding: $shark-listgroup-item-padding;
+    border-width: $shark-listgroup-item-border-width;
+    border-color: $shark-listgroup-border;
+    &:first-child {
+        border-radius: 0;
+    }
+    &.active {
+        background-color: $white-base;
+        color: $gray-dark;
+        border-color: $white-base $shark-listgroup-border;
+        &:before {
+            font-family: 'icomoon';
+            content: $icon-list-selected;
+            color: $icon-list-selected-color;
+            margin-left: $icon-list-selected-size;
+        }
+    }
+    &.active:hover,
+    &.active:focus,
+    &:hover {
+        color: $gray-dark;
+        background-color: $gray-lighter;
+        border-color: $white-base $shark-listgroup-border;
+    }
+    &:last-child {
+        border-radius: 0;
+        &:hover,
+        &.active {
+            border-bottom: 1px solid $shark-listgroup-border;
+        }
+    }
+}

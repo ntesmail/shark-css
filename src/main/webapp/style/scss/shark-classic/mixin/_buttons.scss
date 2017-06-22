@@ -27,6 +27,9 @@
     &.disabled,
     &[disabled],
     fieldset[disabled] & {
+        color: #fff;
+        background-color: $gray-lighter;
+        border-color: $gray-lighter;
         &:hover,
         &:focus,
         &.focus {
