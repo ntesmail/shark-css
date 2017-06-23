@@ -1,8 +1,8 @@
 @import "variables";
-@import "../shark-bootstrap/bootstrap";
+@import '../shark-bootstrap/bootstrap';
 @import "mixin";
+@import "rebase";
 @import "buttons";
-@import "forms";
 @import "navs";
 @import "navbar";
 @import "tables";
@@ -11,3 +11,4 @@
 @import "titles";
 @import "fontIcon";
 @import "selecter";
+@import "forms";

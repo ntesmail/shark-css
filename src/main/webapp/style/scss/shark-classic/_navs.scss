@@ -28,6 +28,7 @@
 // -------------------------
 // Give the tabs something to sit on
 .nav-tabs {
+    margin-bottom: $nav-tabs-margin-bottom;
     >li {
         margin: 0px; // Actual tabs (as links)
         >a {

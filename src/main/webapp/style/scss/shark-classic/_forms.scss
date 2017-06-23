@@ -5,17 +5,6 @@ input[type="checkbox"]:focus {
     outline: 0px;
 }
 
-// Common form controls
-.form-control {
-    @include box-shadow(none);
-    @include transition(border-color ease-in-out 0s, box-shadow ease-in-out 0s);
-    &:focus {
-        border-color: $input-border;
-        outline: 0;
-        @include box-shadow(none);
-    }
-}
-
 //调整checkBox和radio样式
 .input-label {
     position: relative;
@@ -46,13 +35,6 @@ input[type="checkbox"]:checked+span:before {
     color: $icon-list-selected-color;
 }
 
-input[type="checkbox"]:disabled+span:before,
-input[type="checkbox"].disabled+span:before,
-fieldset[disabled]+span:before {
-    border: 1px solid $gray-light;
-    cursor: $cursor-disabled;
-}
-
 input[type="radio"]+span:before {
     content: "";
     display: inline-block;
@@ -71,9 +53,64 @@ input[type="radio"]:checked+span:before {
     color: $icon-radio-selected-color;
 }
 
-input[type="radio"]:disabled+span:before,
-input[type="radio"].disabled+span:before,
-fieldset[disabled]+span:before {
-    border: 1px solid $gray-light;
-    cursor: $cursor-disabled;
+input[type="radio"],
+input[type="checkbox"] {
+    &[disabled]+span:before,
+    &.disabled+span:before,
+    fieldset[disabled] &+span:before {
+        border: 1px solid $gray-light;
+        cursor: $cursor-disabled;
+    }
+}
+
+// Common form controls
+.form-control {
+    @include box-shadow(none);
+    @include transition(border-color ease-in-out 0s, box-shadow ease-in-out 0s);
+    &:focus {
+        border-color: $input-border;
+        outline: 0;
+        @include box-shadow(none);
+    }
+}
+
+.form-horizontal {
+    .row {
+        margin: 0 15px;
+    }
+    // 表单行
+    .form-group {
+        line-height: $form-group-line-height;
+        margin-bottom: $form-group-margin-bottom;
+    }
+    // 表单标签
+    .form-label {
+        margin: 0 10px 0 0;
+        float: left;
+        line-height: $form-group-line-height;
+        font-size: $font-size-base;
+    }
+    // 表单项的信息块
+    .form-input {
+        overflow: hidden;
+    }
+    // 消除表单项信息块中的项间距
+    .form-input-group-item {
+        padding: 0;
+    }
+    // 表单文本
+    .form-text {
+        line-height: $form-group-line-height;
+        font-size: $font-size-base;
+    }
+    // 水平选择框列表
+    .radio-inline,.checkbox-inline{
+        padding:0 0 0 10px;
+    }
+}
+
+// 在table中的多选
+.checkbox-table {
+    margin: 0px;
+    padding-left: 9px;
 }

@@ -20,7 +20,8 @@
 
 // Alternate buttons
 // --------------------------------------------------
-.btn-default {
+.btn-default,
+.btn-select {
     @include button-style($btn-default-color, $btn-default-bg, $btn-default-border, $gray-light);
     &:focus,
     &.focus,
@@ -48,7 +49,7 @@
         }
     }
 }
-
+// primary appears as  blue-green
 .btn-primary {
     @include button-style($btn-primary-color, $btn-primary-bg, $btn-primary-border, $btn-primary-click-bg);
 }
@@ -72,8 +73,14 @@
 .btn-danger {
     @include button-style($btn-danger-color, $btn-danger-bg, $btn-danger-border, $btn-danger-click-bg);
 }
+// 最小按钮，用于分页
+.btn-most-sm {
+    padding: 0px;
+    width: $btn-most-sm-width;
+    height: $btn-most-sm-height;
+}
 
-// Link buttons
+// Link buttons 
 // -------------------------
 // Make a button look and behave like a link
 .btn-link {
@@ -88,8 +95,8 @@
         &:focus,
         &.focus {
             color: $link-click-color;
-            background-color: $white-base;
-            border-color: $white-base;
+            background-color: transparent;
+            border-color: transparent;
         }
     }
 }

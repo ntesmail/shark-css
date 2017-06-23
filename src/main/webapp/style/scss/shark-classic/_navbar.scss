@@ -19,20 +19,20 @@
         background-color: $navbar-title-bg-color;
         border-bottom: solid 1px $navbar-title-border-color;
         i {
-            margin-right: 7px;
+            margin-right: 11px;
         }
         i:before {
             vertical-align: middle;
             text-align: center;
             font: bolder 13px/13px icomoon;
-            content: $icon-down;
+            content: $icon-up;
         }
     }
     a.nav-title.showList {
         border-bottom: 0px;
         i:before {
             font: bolder 13px/13px icomoon;
-            content: $icon-up;
+            content: $icon-down;
         }
     }
     a.nav-title:last-child,

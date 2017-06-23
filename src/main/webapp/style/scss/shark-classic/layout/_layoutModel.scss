@@ -21,7 +21,8 @@ body {
 .row-driveline {
     width: 100%;
     height: 0px;
-    border-top: 1px solid $gray-lighter;
+    border-top: 1px solid $gray-light;
+    margin-bottom:$m-block-margin-bottom;
 }
 
 
@@ -30,7 +31,8 @@ body {
 .row-dashline {
     width: 100%;
     height: 0px;
-    border-top: 1px dashed $gray-lighter;
+    border-top: 1px dashed $gray-light;
+    margin-bottom:$m-block-margin-bottom;
 }
 
 
@@ -95,6 +97,7 @@ body {
     margin: 0 auto;
     .g-left-menu {
         overflow: hidden;
+        padding: 0;
         border-bottom: 0px;
         height: 100%;
         float: left;
@@ -130,7 +133,9 @@ body {
         }
     }
     .m-block,
-    .m-block-gray {
+    .m-block-gray,
+    .m-page,
+    .m-text-block{
         margin-bottom: $m-block-margin-bottom;
     }
     .m-block {
@@ -143,8 +148,24 @@ body {
             background-color: $white-base;
         }
     }
+    .m-text-block{
+        font-size:$font-size-base;
+        color:$m-text-block-color;
+        .m-text-title{
+            font-weight:bold;
+        }
+        p{
+            line-height:$m-text-line-height;
+        }
+    }
     .m-block-gray {
         background-color: $m-block-gray-bg-color;
         padding: $m-block-gray-padding-top $m-block-gray-padding-left;
+    }
+    .u-welcome-title {
+        font-size: $font-size-large;
+        color: $gray-darker;
+        text-align: center;
+        margin-top: $m-welcome-title-margin-top;
     }
 }

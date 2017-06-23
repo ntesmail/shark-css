@@ -1,210 +1,92 @@
-i ,
-[class*="icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'FontAwesome' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  position: relative;
-  top: 1px;
-  display: inline-block;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-down:before {
+    content: "\e901";
+}
 
-.icon-equals {
-  &:before {
-    content: $icon-equals;
-  }
+.icon-up:before {
+    content: "\e902";
 }
-.icon-help_outline {
-  &:before {
-    content: $icon-help_outline;
-  }
+
+.icon-checkbox-selectd:before {
+    content: "\e903";
+    color: #4ca6e6;
 }
-.icon-search2 {
-  &:before {
-    content: $icon-search2;
-  }
+
+.icon-radio-selected:before {
+    content: "\e913";
+    color: #4990e2;
 }
-.icon-drag_handle {
-  &:before {
-    content: $icon-drag_handle;
-  }
+
+.icon-close:before {
+    content: "\e900";
+    color: #cacaca;
 }
-.icon-warning-outline {
-  &:before {
-    content: $icon-warning-outline;
-  }
+
+.icon-checkbox-selected:before {
+    content: "\e908";
+    color: #4ca6e6;
 }
-.icon-star {
-  &:before {
-    content: $icon-star;
-  }
+
+.icon-down-list:before {
+    content: "\e90a";
+    color: #979797;
 }
-.icon-stop {
-  &:before {
-    content: $icon-stop;
-  }
+
+.icon-calendar:before {
+    content: "\e953";
+    color: #808080;
 }
-.icon-chevron-right {
-  &:before {
-    content: $icon-chevron-right;
-  }
+
+.icon-first:before {
+    content: "\e912";
+    color: #9b9b9b;
 }
-.icon-chevron-down {
-  &:before {
-    content: $icon-chevron-down;
-  }
+
+.icon-first-disabled:before {
+    content: "\e911";
+    color: #e7e7e7;
 }
-.icon-square-o {
-  &:before {
-    content: $icon-square-o;
-  }
+
+.icon-prev:before {
+    content: "\e910";
+    color: #9b9b9b;
 }
-.icon-exchange {
-  &:before {
-    content: $icon-exchange;
-  }
+
+.icon-prev-disabled:before {
+    content: "\e90f";
+    color: #e7e7e7;
 }
-.icon-angle-double-right {
-  &:before {
-    content: $icon-angle-double-right;
-  }
+
+.icon-last-disabled:before {
+    content: "\e90e";
+    color: #e7e7e7;
 }
-.icon-angle-right {
-  &:before {
-    content: $icon-angle-right;
-  }
+
+.icon-next:before {
+    content: "\e90d";
+    color: #9b9b9b;
 }
-.icon-angle-down {
-  &:before {
-    content: $icon-angle-down;
-  }
+
+.icon-next-disabled:before {
+    content: "\e90c";
+    color: #e7e7e7;
 }
-.icon-exclamation {
-  &:before {
-    content: $icon-exclamation;
-  }
-}
-.icon-play-circle {
-  &:before {
-    content: $icon-play-circle;
-  }
-}
-.icon-minus-square-o {
-  &:before {
-    content: $icon-minus-square-o;
-  }
-}
-.icon-toggle-down {
-  &:before {
-    content: $icon-toggle-down;
-  }
-}
-.icon-long-arrow-down {
-  &:before {
-    content: $icon-long-arrow-down;
-  }
-}
-.icon-long-arrow-up {
-  &:before {
-    content: $icon-long-arrow-up;
-  }
-}
-.icon-check-square-o {
-  &:before {
-    content: $icon-check-square-o;
-  }
-}
-.icon-chevron-left {
-  &:before {
-    content: $icon-chevron-left;
-  }
-}
-.icon-angle-left {
-  &:before {
-    content: $icon-angle-left;
-  }
-}
-.icon-check {
-  &:before {
-    content: $icon-check;
-  }
-}
-.icon-close {
-  &:before {
-    content: $icon-close;
-  }
-}
-.icon-plus {
-  &:before {
-    content: $icon-plus;
-  }
-}
-.icon-minus {
-  &:before {
-    content: $icon-minus;
-  }
-}
-.icon-chevron-up {
-  &:before {
-    content: $icon-chevron-up;
-  }
-}
-.icon-angle-up {
-  &:before {
-    content: $icon-angle-up;
-  }
-}
-.icon-user {
-  &:before {
-    content: $icon-user;
-  }
-}
-.icon-trash-o {
-  &:before {
-    content: $icon-trash-o;
-  }
-}
-.icon-home {
-  &:before {
-    content: $icon-home;
-  }
-}
-.icon-clock-o {
-  &:before {
-    content: $icon-clock-o;
-  }
-}
-.icon-lock {
-  &:before {
-    content: $icon-lock;
-  }
-}
-.icon-edit {
-  &:before {
-    content: $icon-edit;
-  }
-}
-.icon-calendar {
-  &:before {
-    content: $icon-calendar;
-  }
-}
-.icon-unlock {
-  &:before {
-    content: $icon-unlock;
-  }
-}
-.icon-unlock-alt {
-  &:before {
-    content: $icon-unlock-alt;
-  }
+
+.icon-last:before {
+    content: "\e90b";
+    color: #979797;
 }

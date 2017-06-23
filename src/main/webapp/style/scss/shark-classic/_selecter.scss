@@ -5,7 +5,7 @@
 .position-relative {
     position: relative;
 }
-
+// 选择框样式
 .shark-selecter,
 .open {
     box-sizing: border-box;
@@ -61,7 +61,7 @@
         border-radius: $shark-selecter-radius $shark-selecter-radius 0 0;
     }
 }
-
+// 选择框下拉列表
 .list-group-item {
     height: $input-height-base;
     line-height: $input-height-base;
