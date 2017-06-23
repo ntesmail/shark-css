@@ -19,19 +19,19 @@
         background-color: $navbar-title-bg-color;
         border-bottom: solid 1px $navbar-title-border-color;
         i {
-            line-height: $navbar-height;
-            margin-right: 11px;
-            margin-top: -4px;
+            margin-right: 7px;
         }
         i:before {
-            font-family: 'icomoon';
+            vertical-align: middle;
+            text-align: center;
+            font: bolder 13px/13px icomoon;
             content: $icon-down;
         }
     }
     a.nav-title.showList {
         border-bottom: 0px;
         i:before {
-            font-family: 'icomoon';
+            font: bolder 13px/13px icomoon;
             content: $icon-up;
         }
     }

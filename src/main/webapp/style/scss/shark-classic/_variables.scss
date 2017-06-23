@@ -151,6 +151,9 @@ $input-height-base: ($line-height-computed + ($padding-base-vertical * 2) + 2) !
 $input-height-large: (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default; //~38px
 //** Small `.form-control` height
 $input-height-small: (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default; //~26px
+$input-checkbox-width:16px !default;
+$input-checkbox-margin-right:10px !default;
+$icon-checkbox-font:bold 14px/14px icomoon;
 //== Media queries breakpoints
 //
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
@@ -400,12 +403,8 @@ $shark-selecter-padding: 0 $shark-base-indent !default;
 $shark-selecter-font-size: $font-size-small;
 $shark-selecter-radius: $border-radius-small !default;
 $shark-selecter-minwidth: 100px !default;
-// $shark-selecter-labelheight: $shark-selecter-font-size * 2.5;
-// $shark-selecter-color: $shark-base-color;
-// $shark-selecter-bg: $shark-base-bg;
 $shark-selecter-disable-color: $shark-disable-color;
 $shark-selecter-disable-bg: $shark-disable-bg;
-// $shark-selecter-caret-width: 4px !default;
 $shark-selecter-caret-border-color: #979797 !default;
 $shark-selecter-caret-border-top:11px !default;
 $shark-selecter-caret-border-right:7.5px !default;
