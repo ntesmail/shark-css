@@ -74,39 +74,53 @@ input[type="checkbox"] {
     }
 }
 
-.form-horizontal {
+// Make form groups behave like rows
+// Inline forms
+// [converter] extracted as `@mixin form-inline` for libsass compatibility
+.form-inline {
+    @include form-inline;
     .row {
-        margin: 0 15px;
+        @include make-row;
     }
-    // 表单行
+}
+
+.form-inline,
+.form-horizontal {
     .form-group {
         line-height: $form-group-line-height;
         margin-bottom: $form-group-margin-bottom;
-    }
-    // 表单标签
-    .form-label {
-        margin: 0 10px 0 0;
+    } // 表单标签
+    .control-label {
+        margin-right: 10px;
         float: left;
+        padding: 0;
         line-height: $form-group-line-height;
         font-size: $font-size-base;
-    }
-    // 表单项的信息块
+    } // 表单项的信息块
     .form-input {
         overflow: hidden;
-    }
-    // 消除表单项信息块中的项间距
+    } // 消除表单项信息块中的项间距
     .form-input-group-item {
         padding: 0;
-    }
-    // 表单文本
+    } // 表单文本
     .form-text {
         line-height: $form-group-line-height;
         font-size: $font-size-base;
+    } // 水平选择框列表
+    .radio-inline,
+    .checkbox-inline {
+        padding: 0 0 0 10px;
     }
-    // 水平选择框列表
-    .radio-inline,.checkbox-inline{
-        padding:0 0 0 10px;
+}
+.form-horizontal {
+    .form-group {
+        width:100%;
     }
+     @media (min-width: $screen-sm-min) {
+        .control-label {          
+            padding-top:0; 
+        }
+    } 
 }
 
 // 在table中的多选

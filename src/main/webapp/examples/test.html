@@ -210,20 +210,20 @@
             </div>
             <div class="form-horizontal-label-4-1 row  form-data">
                 <div class="form-group col-sm-3">
-                    <label class="form-label">采购单号：</label>
+                    <label class="control-label">采购单号：</label>
                     <div class="control-input">
                         <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="model.searchForm.purchaseOrder">
                     </div>
                 </div>
                 <div class="form-group col-sm-3">
-                    <label class="form-label">SKUID：</label>
+                    <label class="control-label">SKUID：</label>
                     <div class="control-input">
                         <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-numcheck" ng-model="model.searchForm.skuId"
                             numcheck="" name="skuid">
                     </div>
                 </div>
                 <div class="form-group col-sm-3">
-                    <label class="form-label">单据类型：</label>
+                    <label class="control-label">单据类型：</label>
                     <div class="control-input">
                         <sharkselecter name="type" ng-model="model.searchForm.type" data="model.typeData" actual-key="'value'" display-key="'name'"
                             on-select="onSelect" class="ng-untouched ng-valid ng-not-empty ng-dirty ng-valid-parse">
@@ -232,6 +232,148 @@
                     </div>
                 </div>
                 <!-- ngIf: model.listType==0 -->
+            </div>
+            <div class="bs-example">
+                <form class="form form-inline" role="form" name="formValidator" novalidate form-Validator="">
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <label class="control-label">采购单号：</label>
+                            <div class="form-input form-text ">
+                                <span>YXHZ-12344-1223-1224</span>
+                            </div>
+                        </div>
+                        <div class=" form-group col-sm-4">
+                            <label class="control-label">性别：</label>
+                            <div class="form-input">
+                                <label class="radio-inline">
+                            <input type="radio" ng-model="model.defaultSupplier" ng-value="false" name="defaultSupplier" class="ng-valid ng-not-empty ng-dirty ng-touched" value="false" aria-invalid="false" style=""> <span>男</span>
+                        </label>
+                                <label class="radio-inline">
+                            <input type="radio" ng-model="model.defaultSupplier" ng-value="true" name="defaultSupplier" class="ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" value="true" aria-invalid="false" style=""> <span>女</span>
+                        </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class=" form-group col-sm-5">
+                            <label class="control-label">喜欢的水果：</label>
+                            <div class="form-input">
+                                <label class="checkbox-inline">
+                            <input type="checkbox" ng-model="model.defaultSupplier1" ng-value="false" name="defaultSupplier" class="ng-valid ng-not-empty ng-dirty ng-touched" value="false" aria-invalid="false" style=""> <span>香蕉</span>
+                        </label>
+                                <label class="checkbox-inline">
+                            <input type="checkbox" ng-model="model.defaultSupplier2" ng-value="false" name="defaultSupplier" class="ng-valid ng-not-empty ng-dirty ng-touched" value="false" aria-invalid="false" style=""> <span>苹果</span>
+                        </label>
+                                <label class="checkbox-inline">
+                            <input type="checkbox" ng-model="model.defaultSupplie3r" ng-value="false" name="defaultSupplier" class="ng-valid ng-not-empty ng-dirty ng-touched" value="false" aria-invalid="false" style=""> <span>梨</span>
+                        </label>
+                                <label class="checkbox-inline">
+                            <input type="checkbox" ng-model="model.defaultSupplier4" ng-value="false" name="defaultSupplier" class="ng-valid ng-not-empty ng-dirty ng-touched" value="false" aria-invalid="false" style=""> <span>西瓜</span>
+                        </label>
+
+
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label class="control-label">SKU ID：</label>
+                            <div class="form-input">
+                                <input type="text" class="form-control" ng-model="model.searchForm.skuId">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                         <div class="form-group col-sm-12 ">
+                            <label class="control-label">主供品类：</label>
+                            <div class="form-input">
+                                <textarea style="height:150px;width:100%" ng-model="formData.mainCategory" name="mainCategory" countchars="100" maxlimit="200" class="form-control ng-pristine ng-untouched ng-valid ng-empty"
+                                    aria-invalid="false"></textarea>
+                                <div class="text-right help-block">还可以输入<span id="007B3EFC-34AF-49B3-B4E4-FD87E3EBC193">100</span>个字</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <label class="control-label">采购单号：</label>
+                            <div class="form-input">
+                                <input type="text" class="form-control" ng-model="model.searchForm.purchaseOrder">
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label class="control-label">SKU ID：</label>
+                            <div class="form-input">
+                                <input type="text" class="form-control" ng-model="model.searchForm.skuId">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-12">
+                            <label class="control-label">SKU ID：</label>
+                            <div class="form-input">
+                                <input type="text" class="form-control" ng-model="model.searchForm.skuId">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-sm-1">
+                                <button ng-disabled="model.searchForm.purchaseOrder==='' && model.searchForm.skuId==='' " type="button" class="btn btn-l btn-primary"
+                                    ng-click="search()">查询</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+                <form class="form form-horizontal" role="form" name="formValidator" novalidate form-Validator="">
+                      <div class="form-group ">
+                            <label class="control-label col-sm-2"><span class="text-danger">*&nbsp;</span>供应商名称：</label>
+                            <div class="form-input form-text ">
+                               阿拉丁神灯
+                            </div>
+                        
+                    </div>
+                    <div class="form-group ">
+                        <!--<div class="col-sm-5">-->
+                            <label class="control-label col-sm-2" for="supContacterName">供应商联系人：</label>
+                            <div class="form-input">
+                                <input required type="text" class="form-control" ng-model="model.supplier.supContacterName" name="supContacterName">
+                            </div>
+                        <!--</div>-->
+                    </div>
+                    <div class="form-group ">
+                        <!--<div class="col-sm-6">-->
+                            <label class="control-label col-sm-2" for="supContacterPhone">供应商联系电话：</label>
+                            <div class="form-input">
+                                <input required type="text" class="form-control" ng-model="model.supplier.supContacterPhone" name="supContacterPhone">
+                            </div>
+                        <!--</div>-->
+                    </div>
+                    <div class="form-group ">
+                        <!--<div class="col-sm-12 ">-->
+                            <label class="control-label col-sm-2" for="address"><span class="text-danger">*&nbsp;</span> 供应商验货地址：</label>
+                            <div class="form-input">
+                                <div class="col-sm-2 form-input-group-item">
+                                    <select required not-show-flag selectcheck name="province" ng-model="model.supplier.province" ng-options="province.zoneName for province in Area.provinces track by province.id"
+                                        ng-change="getCity(model.supplier.province.id)" class="form-control">
+                                </select>
+                                </div>
+                                <div class="col-sm-2 form-input-group-item">
+                                    <select required not-show-flag selectcheck name="city" ng-model="model.supplier.city" ng-options="city.zoneName for city in Area.citys track by city.id"
+                                        ng-change="getDistrict(model.supplier.city.id)" class="form-control">
+                                </select>
+                                </div>
+                                <div class="col-sm-2 form-input-group-item">
+                                    <select required not-show-flag selectcheck name="district" ng-model="model.supplier.district" ng-options="district.zoneName for district in Area.districtes track by district.id"
+                                        class="form-control">
+                                </select>
+                                </div>
+                                <div class="col-sm-4 form-input-group-item">
+                                    <input required not-show-flag ng-model="model.supplier.address" name="address" type="text" class="form-control width-percent-60">
+                                </div>
+                            </div>
+                        <!--</div>-->
+                    </div>
+                </form>
             </div>
             <% include layout/foot.html%>
     </body>
