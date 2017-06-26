@@ -331,7 +331,26 @@
                                     </div>
                                     <div class="col-sm-7 text-right">
                                         <sharkpager name="pager" current-page="model.pagination.page" total-page="model.pagination.totalPage" on-page-changed="pageChange"
-                                            hl="model.hl" start-from="1" segment-size="10" gopage="false"></sharkpager>
+                                            hl="model.hl" start-from="1" segment-size="10" gopage="false">
+                                            <ul class="shark-pager pagination">
+                                                <li class="disabled"><a><i class="sprite-firstpage"></i></a></li>
+                                                <li class="disabled"><a><i class="sprite-prevpage"></i></a></li>
+                                                <li class="active"><a>1</a></li>
+                                                <li class="page"><a>2</a></li>
+                                                <li class="page"><a>3</a></li>
+                                                <li class="page"><a>4</a></li>
+                                                <li class="page"><a>5</a></li>
+                                                <li class="page"><a>6</a></li>
+                                                <li class="page"><a>7</a></li>
+                                                <li class="page"><a>8</a></li>
+                                                <li class="page"><a>9</a></li>
+                                                <li class="page"><a>10</a></li>
+                                                <li class="nextsegment"><a>...</a></li>
+                                                <li class="nextpage"><a><i class="sprite-nextpage"></i></a></li>
+                                                <li class="lastpage"><a><i class="sprite-lastpage"></i></a></li>
+                                            </ul>
+                                        </sharkpager>
+
                                     </div>
                                 </div>
                                 <div class="m-text-block">
