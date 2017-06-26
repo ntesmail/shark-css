@@ -101,6 +101,15 @@ gulp.task('serve-express', function (cb) {
             footContent: footContent
         });
     });
+    // shark-classic.html
+    app.get(config.contextPath + '/shark-classic.html', function (req, res) {
+        //向页面模板传递参数，可以传递字符串和对象，注意格式
+        res.render('shark-classic', {
+            converter: converter,
+            headContent: headContent,
+            footContent: footContent
+        });
+    });
     app.get(config.contextPath + '/shark.html', function (req, res) {
         //向页面模板传递参数，可以传递字符串和对象，注意格式
         res.render('shark', {

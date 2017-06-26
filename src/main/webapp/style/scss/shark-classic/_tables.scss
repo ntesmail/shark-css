@@ -9,6 +9,11 @@ th {
     text-align: center;
 }
 
+.table-wrap {
+    overflow-x: auto;
+    width: 100%;
+}
+
 // Baseline styles
 .table {
     >thead,
@@ -21,7 +26,7 @@ th {
                 text-align: center;
                 border: 1px solid $table-border-color;
                 line-height: $line-height-small;
-                vertical-align: top;
+                vertical-align: middle;
             }
         }
     } // Bottom align for column headings
