@@ -10,8 +10,8 @@ $gray-hover: lighten($gray-base, 90%) !default; // #e6e6e6
 $gray-lighter: lighten($gray-base, 90.5%) !default; // #e7e7e7
 //## Font, line-height, and color for body text, headings, and more.
 $font-size-base: 14px !default;
-$font-size-large: 16px !default; // 
-$font-size-small: 12px !default; // 
+$font-size-large: 16px !default; //
+$font-size-small: 12px !default; //
 //布局变量
 $g-min-width:1080px !default;
 $head-width: 100% !default; //头部宽
@@ -27,6 +27,7 @@ $g-title-padding-top:16px !default;
 $g-line-bg-color:#DCEAF3 !default;
 $u-info-margin-top:19px !default;
 $u-info-line-height:19px !default;
+$g-left-menu-width:264px !default;
 $g-right-container-padding:20px !default;
 $m-title-bg-color:#DCEAF4 !default;
 $m-title-height:40px !default;
