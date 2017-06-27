@@ -18,6 +18,46 @@ i ,
 }
 
 
+.icon-folder {
+  &:before {
+    content: $icon-folder;
+  }
+}
+.icon-upload {
+  &:before {
+    content: $icon-upload;
+  }
+}
+.icon-tasks {
+  &:before {
+    content: $icon-tasks;
+  }
+}
+.icon-dashboard {
+  &:before {
+    content: $icon-dashboard;
+  }
+}
+.icon-sitemap {
+  &:before {
+    content: $icon-sitemap;
+  }
+}
+.icon-folder-o {
+  &:before {
+    content: $icon-folder-o;
+  }
+}
+.icon-toggle-off {
+  &:before {
+    content: $icon-toggle-off;
+  }
+}
+.icon-toggle-on {
+  &:before {
+    content: $icon-toggle-on;
+  }
+}
 .icon-check-circle {
   &:before {
     content: $icon-check-circle;
