@@ -17,29 +17,55 @@ i ,
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-equals {
+
+.icon-folder {
   &:before {
-    content: $icon-equals;
+    content: $icon-folder;
   }
 }
-.icon-help_outline {
+.icon-upload {
   &:before {
-    content: $icon-help_outline;
+    content: $icon-upload;
   }
 }
-.icon-search2 {
+.icon-tasks {
   &:before {
-    content: $icon-search2;
+    content: $icon-tasks;
   }
 }
-.icon-drag_handle {
+.icon-dashboard {
   &:before {
-    content: $icon-drag_handle;
+    content: $icon-dashboard;
   }
 }
-.icon-warning-outline {
+.icon-sitemap {
   &:before {
-    content: $icon-warning-outline;
+    content: $icon-sitemap;
+  }
+}
+.icon-folder-o {
+  &:before {
+    content: $icon-folder-o;
+  }
+}
+.icon-toggle-off {
+  &:before {
+    content: $icon-toggle-off;
+  }
+}
+.icon-toggle-on {
+  &:before {
+    content: $icon-toggle-on;
+  }
+}
+.icon-check-circle {
+  &:before {
+    content: $icon-check-circle;
+  }
+}
+.icon-exclamation-circle {
+  &:before {
+    content: $icon-exclamation-circle;
   }
 }
 .icon-star {
@@ -205,5 +231,30 @@ i ,
 .icon-unlock-alt {
   &:before {
     content: $icon-unlock-alt;
+  }
+}
+.icon-equals {
+  &:before {
+    content: $icon-equals;
+  }
+}
+.icon-help_outline {
+  &:before {
+    content: $icon-help_outline;
+  }
+}
+.icon-search2 {
+  &:before {
+    content: $icon-search2;
+  }
+}
+.icon-drag_handle {
+  &:before {
+    content: $icon-drag_handle;
+  }
+}
+.icon-warning-outline {
+  &:before {
+    content: $icon-warning-outline;
   }
 }
