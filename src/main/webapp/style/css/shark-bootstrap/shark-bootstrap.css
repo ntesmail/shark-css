@@ -2328,7 +2328,7 @@ select[multiple].input-lg,
   padding-right: 42.5px;
 }
 
-.form-control-feedback {
+[class*="icon-"].form-control-feedback {
   position: absolute;
   top: 0;
   right: 0;
@@ -6884,8 +6884,7 @@ button .badge {
 /*树组件*/
 /*selecter组件*/
 i,
-[class*="icon-"],
-.glyphicon {
+[class*="icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'FontAwesome' !important;
   speak: none;
@@ -6902,44 +6901,44 @@ i,
   -moz-osx-font-smoothing: grayscale;
 }
 
-.glyphicon-chevron-left:before {
-  content: "";
+.icon-folder:before {
+  content: "";
 }
 
-.glyphicon-chevron-right:before {
-  content: "";
+.icon-upload:before {
+  content: "";
 }
 
-.glyphicon-ok:before {
-  content: "";
+.icon-tasks:before {
+  content: "";
 }
 
-.glyphicon-warning-sign:before {
-  content: "";
+.icon-dashboard:before {
+  content: "";
 }
 
-.glyphicon-remove:before {
-  content: "";
+.icon-sitemap:before {
+  content: "";
 }
 
-.icon-equals:before {
-  content: "";
+.icon-folder-o:before {
+  content: "";
 }
 
-.icon-help_outline:before {
-  content: "";
+.icon-toggle-off:before {
+  content: "";
 }
 
-.icon-search2:before {
-  content: "";
+.icon-toggle-on:before {
+  content: "";
 }
 
-.icon-drag_handle:before {
-  content: "";
+.icon-check-circle:before {
+  content: "";
 }
 
-.icon-warning-outline:before {
-  content: "";
+.icon-exclamation-circle:before {
+  content: "";
 }
 
 .icon-star:before {
@@ -7072,6 +7071,26 @@ i,
 
 .icon-unlock-alt:before {
   content: "";
+}
+
+.icon-equals:before {
+  content: "";
+}
+
+.icon-help_outline:before {
+  content: "";
+}
+
+.icon-search2:before {
+  content: "";
+}
+
+.icon-drag_handle:before {
+  content: "";
+}
+
+.icon-warning-outline:before {
+  content: "";
 }
 
 .list-group {
